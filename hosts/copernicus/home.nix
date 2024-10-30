@@ -25,6 +25,9 @@
 
     programs.zsh = {
         enable = true;
+        shellAliases = {
+            rebuild = "darwin-rebuild switch --flake $HOME/.config/nix";
+        };
         initExtra = ''
             [[ ! -f ${./dots/zsh/p10k.zsh} ]] || source ${./dots/zsh/p10k.zsh}
         '';
