@@ -37,7 +37,6 @@
             "apple-juice"
             "neovide"
             "openscad@snapshot"
-            "qgis"
             "raycast"
             "spaceman"
             "stremio"
