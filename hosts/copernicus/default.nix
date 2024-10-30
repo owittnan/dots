@@ -32,9 +32,10 @@
         enable = true;
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
-
+    
         casks = [
             "apple-juice"
+            "neovide"
             "openscad@snapshot"
             "qgis"
             "raycast"
