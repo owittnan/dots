@@ -10,15 +10,15 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Oscars-MacBook-Air-2
-    darwinConfigurations."Oscars-MacBook-Air-2" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#copernicus
+    darwinConfigurations."copernicus" = nix-darwin.lib.darwinSystem {
       modules = [
         home-manager.darwinModules.home-manager
-        ./hosts/Oscars-MacBook-Air-2/default.nix
+        ./hosts/copernicus/default.nix
       ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."Oscars-MacBook-Air-2".pkgs;
+    darwinPackages = self.darwinConfigurations."copernicus".pkgs;
   };
 }

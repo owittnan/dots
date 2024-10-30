@@ -39,6 +39,6 @@
     };
 
     home.file = {
-        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix/hosts/Oscars-Macbook-Air-2/dots/nvim";
+        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix/hosts/copernicus/dots/nvim";
     };
 }
