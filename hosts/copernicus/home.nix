@@ -4,7 +4,7 @@
     home.stateVersion = "24.05"; 
 
     home.packages = with pkgs; [
-        aws
+        awscli2
         ffmpeg
         jj
         lazygit
@@ -48,8 +48,8 @@
         shellAliases = {
             rebuild = "darwin-rebuild switch --flake $HOME/.config/nix";
             lg = "lazygit";
-        }
-    }
+        };
+    };
 
     home.file = {
         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix/hosts/copernicus/dots/nvim";
