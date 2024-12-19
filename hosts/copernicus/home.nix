@@ -3,15 +3,17 @@
     home.homeDirectory = "/Users/owittnan";
     home.stateVersion = "24.05"; 
 
-    home.packages = [
-        pkgs.ffmpeg
-        pkgs.jj
-        pkgs.nmap
-        pkgs.typescript
-        pkgs.python3
-        pkgs.ripgrep
-        pkgs.watch
-        pkgs.yt-dlp
+    home.packages = with pkgs; [
+        aws
+        ffmpeg
+        jj
+        lazygit
+        nmap
+        typescript
+        python3
+        ripgrep
+        watch
+        yt-dlp
     ];
 
     programs.home-manager.enable = true;
@@ -40,6 +42,14 @@
             ];
         };
     };
+
+    programs.fish = {
+        enable = true;
+        shellAliases = {
+            rebuild = "darwin-rebuild switch --flake $HOME/.config/nix";
+            lg = "lazygit";
+        }
+    }
 
     home.file = {
         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix/hosts/copernicus/dots/nvim";
