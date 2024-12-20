@@ -5,6 +5,7 @@
 
     home.packages = with pkgs; [
         awscli2
+        direnv
         ffmpeg
         jj
         lazygit
