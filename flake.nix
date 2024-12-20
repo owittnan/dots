@@ -6,6 +6,9 @@
     url = "github:LnL7/nix-darwin";
     inputs.nixpkgs.follows = "nixpkgs";
   };
+  inputs.home-manager = {
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
   {
