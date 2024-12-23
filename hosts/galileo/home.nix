@@ -34,6 +34,11 @@
         };
     };
 
+    programs.nix-index = {
+	enable = true;
+	enableFishIntegration = true;
+    };
+
 #     home.file = {
 #         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix/hosts/copernicus/dots/nvim";
 #         ".config/neovide/config.toml".text = ''
