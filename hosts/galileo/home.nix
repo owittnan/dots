@@ -39,10 +39,7 @@
 	enableFishIntegration = true;
     };
 
-#     home.file = {
-#         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix/hosts/copernicus/dots/nvim";
-#         ".config/neovide/config.toml".text = ''
-#             neovim-bin = "/etc/profiles/per-user/owittnan/bin/nvim"
-#         '';
-#     };
+    home.file = {
+        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/shared/dots/nvim";
+    };
 }
