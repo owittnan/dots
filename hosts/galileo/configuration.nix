@@ -76,9 +76,11 @@
   users.users.owittnan = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
+    shell = pkgs.fish;
   };
 
   programs.firefox.enable = true;
+  programs.fish.enable = true;
 
 
   # programs.firefox.enable = true;
