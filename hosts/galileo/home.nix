@@ -10,7 +10,6 @@
         jj
         lazygit
         nmap
-        taffybar
         typescript
         python3
         ripgrep
@@ -45,7 +44,20 @@
 	enableFishIntegration = true;
     };
 
-    services.taffybar.enable = true;
+    programs.xmobar = {
+        enable = true;
+        extraConfig = ''
+        Config
+            { commands = 
+                [ Run Date "%d %b %Y %T" "date" 1
+                , Run XMonadLog
+                ],
+            , sepChar = "%"
+            , alignSep = "}{"
+            , template = " %XMonadLog% }{ %date% "
+            }
+        '';
+    };
 
     services.picom = {
         enable = true;
