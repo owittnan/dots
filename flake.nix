@@ -25,6 +25,11 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/galileo/configuration.nix
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.owittnan = import ./hosts/galileo/home.nix;
+        };
       ];
     };
 
