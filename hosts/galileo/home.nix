@@ -15,6 +15,7 @@
         ripgrep
         watch
         yt-dlp
+        zig
     ];
 
     programs.home-manager.enable = true;
