@@ -41,9 +41,25 @@
     displayManager.lightdm.enable = true;
     desktopManager = {
        xterm.enable = false;
-       xfce.enable = true;
+       xfce = {
+           enable = true;
+	   noDesktop = true;
+	   enableXfwm = false;
+       };
+    };
+    windowManager = {
+    	xmonad = {
+	    enable = true;
+	    enableContribAndExtras = true;
+	    extraPackages = haskellPackages : [
+	    	haskellPackages.xmonad-contrib
+	    	haskellPackages.xmonad-extras
+		haskellPackages.xmonad
+	    ];
+	};
     };
   };
+  services.displayManager.defaultSession = "xfce+xmonad";
   
 
   # Configure keymap in X11
