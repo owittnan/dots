@@ -29,7 +29,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.owittnan = import ./hosts/galileo/home.nix;
-        };
+        }
       ];
     };
 
