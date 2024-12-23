@@ -47,6 +47,12 @@
 
     services.taffybar.enable = true;
 
+    services.picom = {
+        enable = true;
+        backend = "glx";
+        vSync = true;
+    };
+
     home.file = {
         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/shared/dots/nvim";
     };
