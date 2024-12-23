@@ -10,6 +10,7 @@
         jj
         lazygit
         nmap
+        taffybar
         typescript
         python3
         ripgrep
@@ -19,6 +20,10 @@
     ];
 
     programs.home-manager.enable = true;
+
+    programs.alacritty = {
+        enable = true;
+    };
 
     programs.neovim = {
         enable = true;
