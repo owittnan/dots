@@ -3,6 +3,13 @@
     home.homeDirectory = "/home/owittnan";
     home.stateVersion = "24.11"; 
 
+    fonts.fontconfig = {
+        enable = true;
+        defaultFonts = {
+            monospace = [ "Hasklug Nerd Font" ];
+        };
+    };
+
     # TODO: refactor this out into separate files
     home.packages = with pkgs; [
         awscli2
@@ -19,6 +26,8 @@
         zig
         rofi
         xclip
+        stylua
+        nerd-fonts.hasklug
     ];
 
     programs.home-manager.enable = true;
