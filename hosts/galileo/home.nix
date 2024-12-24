@@ -3,6 +3,7 @@
     home.homeDirectory = "/home/owittnan";
     home.stateVersion = "24.11"; 
 
+    # TODO: refactor this out into separate files
     home.packages = with pkgs; [
         awscli2
         direnv
@@ -16,6 +17,7 @@
         watch
         yt-dlp
         zig
+        rofi
     ];
 
     programs.home-manager.enable = true;

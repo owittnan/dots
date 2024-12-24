@@ -38,31 +38,20 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    displayManager = {
-      lightdm.enable = true;
-      defaultSession = "xfce+xmonad";
-    };
-    desktopManager = {
-       xterm.enable = false;
-       xfce = {
-           enable = true;
-           noDesktop = false;
-           enableXfwm = false;
-       };
-    };
     windowManager = {
-        xmonad = {
-            enable = true;
-            enableContribAndExtras = true;
-            extraPackages = haskellPackages : [
-                haskellPackages.xmonad-contrib
-                haskellPackages.xmonad-extras
-                haskellPackages.xmonad
-            ];
-        };
+      xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+        extraPackages = haskellPackages : [
+          haskellPackages.xmonad-contrib
+          haskellPackages.xmonad-extras
+          haskellPackages.xmonad
+        ];
+      };
     };
   };
-  
+
+  services.displayManager.ly.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "gb";
