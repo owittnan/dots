@@ -14,6 +14,7 @@
     home.packages = with pkgs; [
         awscli2
         direnv
+        feh
         ffmpeg
         jj
         lazygit
@@ -34,6 +35,11 @@
 
     programs.alacritty = {
         enable = true;
+        settings = {
+            font = {
+                size = 8;
+            };
+        };
     };
 
     programs.neovim = {
