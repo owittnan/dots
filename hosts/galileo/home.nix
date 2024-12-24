@@ -25,7 +25,6 @@
         watch
         yt-dlp
         zig
-        rofi
         xclip
         stylua
         nerd-fonts.hasklug
@@ -60,6 +59,11 @@
     programs.nix-index = {
         enable = true;
         enableFishIntegration = true;
+    };
+
+    programs.rofi = {
+        enable = true;
+        theme = "Arc-Dark";
     };
 
     programs.xmobar = {
