@@ -18,6 +18,7 @@
         yt-dlp
         zig
         rofi
+        xclip
     ];
 
     programs.home-manager.enable = true;
