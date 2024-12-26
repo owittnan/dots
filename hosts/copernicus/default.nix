@@ -6,6 +6,9 @@
 
     # Necessary for using flakes on this system.
     nix.settings.experimental-features = "nix-command flakes";
+
+    nix.settings.trusted-public-keys = [ "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" ];
+    nix.settings.substituters = [ "https://cache.iog.io" ];
     
     # Create /etc/zshrc that loads the nix-darwin environment.
     # programs.zsh.enable = true;  # default shell on catalina
