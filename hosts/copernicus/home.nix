@@ -5,6 +5,7 @@
 
     home.packages = with pkgs; [
         awscli2
+        cachix
         direnv
         ffmpeg
         jj
