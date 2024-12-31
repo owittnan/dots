@@ -11,6 +11,14 @@
     nix.settings.substituters = [ "https://cache.iog.io" ];
     nix.settings.trusted-users = [ "owittnan" ];
     
+    nix.registry."node".to = {
+        type = "github";
+        owner = "andyrichardson";
+        repo = "nix-node";
+    };
+
+    nix.binaryCaches = [ "https://cache.nixos.org" "https://nix-node.cachix.org" ];
+
     # Create /etc/zshrc that loads the nix-darwin environment.
     # programs.zsh.enable = true;  # default shell on catalina
     programs.fish.enable = true;
