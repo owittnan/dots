@@ -51,6 +51,7 @@
             "raycast"
             "spaceman"
             "stremio"
+            "tailscale"
             "vial"
         ];
     };
