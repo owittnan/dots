@@ -46,6 +46,7 @@
     
         casks = [
             "apple-juice"
+            "android-studio"
             "neovide"
             "openscad@snapshot"
             "raycast"
