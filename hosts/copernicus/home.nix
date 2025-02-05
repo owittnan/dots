@@ -14,6 +14,7 @@
         typescript
         python3
         ripgrep
+        stats
         watch
         yt-dlp
     ];
