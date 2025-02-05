@@ -45,7 +45,6 @@
         onActivation.upgrade = true;
     
         casks = [
-            "apple-juice"
             "android-studio"
             "kicad"
             "neovide"
