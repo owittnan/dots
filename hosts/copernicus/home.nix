@@ -13,6 +13,7 @@
         nmap
         typescript
         python3
+        helix
         ripgrep
         stats
         watch
