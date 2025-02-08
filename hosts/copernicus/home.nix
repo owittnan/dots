@@ -13,13 +13,10 @@
         nmap
         typescript
         python3
-        helix
         ripgrep
         stats
         watch
         yt-dlp
-
-        elm
     ];
 
     programs.home-manager.enable = true;
@@ -27,8 +24,13 @@
     programs.neovim = {
         enable = true;
         defaultEditor = true;
-        viAlias = true;
-        vimAlias = true;
+    };
+
+    programs.helix = {
+        enable = true;
+        settings = {
+            theme = "catppuccin_mocha";
+        };
     };
 
     programs.fish = {
@@ -36,6 +38,7 @@
         shellAliases = {
             rebuild = "darwin-rebuild switch --flake $HOME/.config/nix";
             lg = "lazygit";
+            vim = "hx";
         };
     };
 
