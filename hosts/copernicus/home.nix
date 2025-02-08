@@ -31,6 +31,12 @@
         settings = {
             theme = "catppuccin_mocha";
         };
+        themes = {
+            catppuccin_mocha_trans = {
+                "inherits" = "catppuccin_mocha";
+                "ui.background" = {};
+            };
+        };
     };
 
     programs.fish = {
