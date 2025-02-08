@@ -18,6 +18,8 @@
         stats
         watch
         yt-dlp
+
+        elm
     ];
 
     programs.home-manager.enable = true;
